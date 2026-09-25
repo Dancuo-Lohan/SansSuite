@@ -1,0 +1,54 @@
+{
+    "name": "lohandancuo/sans-suite",
+    "description": "Application locale de suivi des candidatures.",
+    "type": "project",
+    "keywords": ["php", "sqlite", "job-search", "application-tracker"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lohan Dancuo",
+            "homepage": "https://lohan.dancuo.fr/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "nyholm/psr7": "^1.8",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "src/Controllers/",
+            "ApiControllers\\": "src/ApiControllers/",
+            "Middleware\\": "src/Middleware/",
+            "Modules\\": "src/Modules/",
+            "Domain\\": "src/Domain/",
+            "Repositories\\": "src/Repositories/",
+            "Services\\": "src/Services/",
+            "Support\\": "src/Support/",
+            "Validation\\": "src/Validation/",
+            "CorianderCore\\Core\\": "CorianderCore/core/",
+            "CorianderCore\\Modules\\": "CorianderCore/modules/"
+        },
+        "files": ["src/Support/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CorianderCore\\Tests\\": "CorianderCore/Tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --testsuite \"Sans Suite Test Suite\" --testdox"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

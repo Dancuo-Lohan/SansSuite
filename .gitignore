@@ -1,0 +1,12 @@
+composer.phar
+.env
+.phpunit.result.cache
+/vendor/
+/backups/coriander/
+/cache/.updater-rate-limit.json
+/database/*.sqlite
+/database/*.sqlite-wal
+/database/*.sqlite-shm
+/database/*.sqlite-journal
+/storage/attachments/*
+!/storage/attachments/.gitkeep
